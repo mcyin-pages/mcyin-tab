@@ -1,0 +1,11 @@
+{
+  "websites": [
+    {
+      "name": "网站名字",
+      "url": "url",
+      "category": "网站分类",
+      "icon": "/images/icons/websites/url.webp",
+      "color": "bg-blue-500"
+    }
+  ]
+}

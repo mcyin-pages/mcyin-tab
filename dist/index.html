@@ -1,0 +1,484 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>MCYIN TAB - 小殷的新标签页</title>
+    <!-- Tailwind CSS -->
+    <link href="/css/tailwindcss.css" rel="stylesheet">
+    <style>
+        /* 背景渐变 */
+        .bg-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+        }
+
+        /* 将所有SVG图标变为白色 */
+        .my-button-icon {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- 背景图片 -->
+    <div id="background"
+        class="fixed inset-0 w-full h-full bg-cover bg-center z-0 transition-all duration-1000 ease-in-out"
+        style="background-image: url('/images/background-image.webp');">
+        <div class="absolute inset-0 bg-gradient"></div>
+    </div>
+
+    <!-- 主内容 -->
+    <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-8">
+        <!-- 头部 -->
+        <header class="w-full max-w-4xl mb-8 text-center animate-fade-in">
+            <!-- 图标与标题横向布局，允许自动换行 -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
+                <img src="/images/icon.webp" alt="MCYIN TAB 图标" class="w-32 h-32 rounded-full shadow-lg">
+                <div class="flex flex-col text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">MCYIN TAB</h1>
+                    <p class="text-light text-lg">小殷的新标签页</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 搜索框 -->
+        <div class="w-full max-w-2xl mb-8 animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="relative">
+                <input type="text" id="search-input" placeholder="搜索或输入网址"
+                    class="w-full py-3 px-5 pr-12 rounded-full glass-effect text-white placeholder-light search-focus outline-none">
+                <button id="search-btn"
+                    class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-primary hover:bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+                    <img src="/images/icons/button/search.svg" alt="搜索" class="w-4 h-4 my-button-icon">
+                </button>
+            </div>
+            <!-- 搜索引擎选择 -->
+            <div class="mt-3 flex justify-center gap-2">
+                <button
+                    class="search-engine-btn active bg-primary text-white px-3 py-1 rounded-full text-xs font-medium transition-colors"
+                    data-engine="baidu">百度</button>
+                <button
+                    class="search-engine-btn bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-xs font-medium transition-colors"
+                    data-engine="bing">必应</button>
+                <button
+                    class="search-engine-btn bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-xs font-medium transition-colors"
+                    data-engine="google">谷歌</button>
+            </div>
+        </div>
+
+        <!-- 网站分类 -->
+        <div class="w-full max-w-4xl glass-effect p-6 rounded-xl animate-fade-in" style="animation-delay: 0.4s;">
+            <!-- 分类标签 -->
+            <div class="flex flex-wrap gap-2 mb-6 justify-center">
+                <button
+                    class="category-btn active bg-primary text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                    data-category="all">全部网站</button>
+                <button
+                    class="category-btn bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                    data-category="小殷">小殷网站</button>
+                <button
+                    class="category-btn bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                    data-category="常用">常用网站</button>
+                <!--
+                <button
+                    class="category-btn bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                    data-category="模板">模板网站</button>
+ -->
+            </div>
+
+            <!-- 网站图标网格 -->
+            <div id="website-grid" class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4">
+                <!-- 网站图标将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <!-- 固定的网站列表 -->
+        <div class="mt-6 text-white text-sm text-center animate-fade-in" style="animation-delay: 0.6s;">
+            <p>精选常用网站，方便日常使用。</p>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="relative z-10 w-full text-center py-4 text-light text-sm">
+        <div class="flex justify-center gap-4 mb-2">
+            <button id="bg-prev" class="hover:text-white transition-colors">
+                <img src="/images/icons/button/chevron-left.svg" alt="上一张" class="w-4 h-4 my-button-icon">
+            </button>
+            <button id="bg-next" class="hover:text-white transition-colors">
+                <img src="/images/icons/button/chevron-right.svg" alt="下一张" class="w-4 h-4 my-button-icon">
+            </button>
+            <button id="custom-bg" class="hover:text-white transition-colors">
+                <img src="/images/icons/button/image.svg" alt="自定义背景" class="w-4 h-4 my-button-icon">
+            </button>
+        </div>
+        <p>©
+            <script>document.write(new Date().getFullYear())</script> tab.mcyin.com 小殷的新标签页
+        </p>
+    </footer>
+
+
+
+    <!-- 自定义背景模态框 -->
+    <div id="custom-bg-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="glass-effect p-6 rounded-xl w-full max-w-md animate-slide-up">
+            <h2 class="text-xl font-bold text-white mb-4">自定义背景</h2>
+            <div class="mb-4">
+                <label for="bg-url" class="block text-light mb-2">背景图片地址</label>
+                <input type="url" id="bg-url"
+                    class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 text-white placeholder-light search-focus outline-none"
+                    placeholder="请输入背景图片地址" required="">
+            </div>
+            <div class="flex gap-3">
+                <button id="apply-bg"
+                    class="flex-1 bg-primary hover:bg-blue-600 text-white py-2 rounded-lg transition-colors">应用</button>
+                <button id="cancel-bg"
+                    class="flex-1 bg-white bg-opacity-20 hover:bg-opacity-30 text-white py-2 rounded-lg transition-colors">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 背景图片数组 - 初始包含默认图片，稍后会从API获取更多图片
+        let backgrounds = [
+            '/images/background-image.webp'
+        ];
+        let currentBgIndex = 0;
+
+        // 网站数据 - 将从JSON文件加载
+        let websites = [];
+
+        // DOM元素
+        const backgroundElement = document.getElementById('background');
+        const websiteGrid = document.getElementById('website-grid');
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        // 这些元素在HTML中不存在，暂时注释掉
+        // const addSiteBtn = document.getElementById('add-site-btn');
+        // const addSiteModal = document.getElementById('add-site-modal');
+        // const addSiteForm = document.getElementById('add-site-form');
+        // const cancelAddBtn = document.getElementById('cancel-add');
+        const customBgModal = document.getElementById('custom-bg-modal');
+        const customBgBtn = document.getElementById('custom-bg');
+        const applyBgBtn = document.getElementById('apply-bg');
+        const cancelBgBtn = document.getElementById('cancel-bg');
+        const bgPrevBtn = document.getElementById('bg-prev');
+        const bgNextBtn = document.getElementById('bg-next');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const searchEngineBtns = document.querySelectorAll('.search-engine-btn');
+        let currentSearchEngine = 'baidu';
+        // 这些元素在HTML中不存在，暂时注释掉
+        // const iconOptions = document.querySelectorAll('.icon-option');
+        // const selectedIconInput = document.getElementById('selected-icon');
+        // const selectedColorInput = document.getElementById('selected-color');
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 从JSON文件加载网站数据
+            fetchWebsitesData()
+                .then(() => {
+                    // 从本地存储加载数据
+                    loadData();
+
+                    // 渲染网站图标
+                    renderWebsites();
+
+                    // 设置事件监听器
+                    setupEventListeners();
+
+                    // 从API获取Bing背景图片
+                    fetchBingBackgrounds();
+                })
+                .catch(error => {
+                    console.error('加载网站数据失败:', error);
+                });
+        });
+
+        // 从JSON文件加载网站数据
+        async function fetchWebsitesData() {
+            try {
+                const response = await fetch('/data/websites.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                websites = data.websites || [];
+                console.log('成功加载网站数据:', websites.length, '个网站');
+            } catch (error) {
+                console.error('获取网站数据失败:', error);
+                websites = [];
+            }
+        }
+
+        // 从API获取Bing背景图片
+        async function fetchBingBackgrounds() {
+            try {
+                const response = await fetch('https://api.mcyin.com/bing-hp');
+                const data = await response.json();
+
+                // 检查数据格式并提取图片URL
+                if (data && data.images && Array.isArray(data.images)) {
+                    // 提取图片URL并添加到背景数组，优先使用uhdurl
+                    const bingImages = data.images.map(item => {
+                        // 优先使用uhdurl（超高清图片）
+                        if (item.uhdurl) {
+                            return item.uhdurl;
+                        }
+                        // 如果没有uhdurl，则使用url并补全完整路径
+                        else if (item.url) {
+                            // 检查url是否已经是完整路径
+                            if (item.url.startsWith('http://') || item.url.startsWith('https://')) {
+                                return item.url;
+                            } else {
+                                // 如果是相对路径，添加Bing域名
+                                return `https://cn.bing.com${item.url}`;
+                            }
+                        }
+                        // 最后尝试使用urlbase构建完整路径
+                        else if (item.urlbase) {
+                            return `https://cn.bing.com${item.urlbase}_UHD.jpg`;
+                        }
+                        return null;
+                    }).filter(url => url !== null);
+
+                    // 获取当前背景，用于后续恢复
+                    const currentBg = backgroundElement.style.backgroundImage.replace(/url\(['"](.+)['"]\)/, '$1');
+
+                    // 保存默认背景
+                    const defaultBg = '/images/background-image.webp';
+
+                    // 创建新的背景数组，只包含Bing图片（不包含默认图片）
+                    const newBackgrounds = [...bingImages];
+
+                    // 添加之前保存的自定义背景（如果有）
+                    const savedCustomBackgrounds = localStorage.getItem('customBackgrounds');
+                    if (savedCustomBackgrounds) {
+                        const customBackgrounds = JSON.parse(savedCustomBackgrounds);
+                        customBackgrounds.forEach(bg => {
+                            // 只添加不在新列表中的自定义背景
+                            if (!newBackgrounds.includes(bg) && bg !== defaultBg && !bingImages.includes(bg)) {
+                                newBackgrounds.push(bg);
+                            }
+                        });
+                    }
+
+                    // 更新背景数组
+                    backgrounds = newBackgrounds;
+
+                    // 尝试恢复到之前的背景，如果它还在列表中
+                    if (currentBg && newBackgrounds.includes(currentBg)) {
+                        currentBgIndex = newBackgrounds.indexOf(currentBg);
+                    } else {
+                        // 否则随机选择一张Bing图片
+                        currentBgIndex = Math.floor(Math.random() * newBackgrounds.length);
+                    }
+
+                    backgroundElement.style.backgroundImage = `url('${backgrounds[currentBgIndex]}')`;
+                    saveData();
+
+                    // 保存更新后的背景列表
+                    localStorage.setItem('customBackgrounds', JSON.stringify(backgrounds));
+                }
+            } catch (error) {
+                console.error('获取Bing背景图片失败:', error);
+                // 出错时保持使用当前背景列表
+            }
+        }
+
+        // 从本地存储加载背景设置
+        function loadData() {
+            const savedBgIndex = localStorage.getItem('currentBgIndex');
+            const savedCustomBackgrounds = localStorage.getItem('customBackgrounds');
+
+            // 如果有保存的自定义背景列表，加载它
+            if (savedCustomBackgrounds) {
+                backgrounds = JSON.parse(savedCustomBackgrounds);
+            }
+
+            // 如果有保存的背景索引，使用它
+            if (savedBgIndex !== null) {
+                currentBgIndex = parseInt(savedBgIndex);
+                if (currentBgIndex >= 0 && currentBgIndex < backgrounds.length) {
+                    backgroundElement.style.backgroundImage = `url('${backgrounds[currentBgIndex]}')`;
+                }
+            }
+        }
+
+        // 保存背景设置到本地存储
+        function saveData() {
+            localStorage.setItem('currentBgIndex', currentBgIndex.toString());
+        }
+
+        // 渲染网站图标
+        function renderWebsites(filter = 'all') {
+            websiteGrid.innerHTML = '';
+
+            const filteredWebsites = filter === 'all'
+                ? websites
+                : websites.filter(site => site.category === filter);
+
+            filteredWebsites.forEach((site, index) => {
+                const siteElement = document.createElement('div');
+                siteElement.className = 'flex flex-col items-center icon-hover animate-fade-in';
+                siteElement.style.animationDelay = `${0.1 * (index % 10)}s`;
+
+                siteElement.innerHTML = `
+                    <a href="${site.url}" target="_blank" class="w-12 h-12 ${site.color} rounded-lg flex items-center justify-center mb-1 overflow-hidden">
+                        <img src="${site.icon}" alt="${site.name}" class="w-full h-full object-cover">
+                    </a>
+                    <span class="text-white text-xs text-center max-w-[60px] truncate">${site.name}</span>
+                `;
+
+                websiteGrid.appendChild(siteElement);
+            });
+        }
+
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 分类按钮点击事件
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除所有按钮的active状态
+                    categoryBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary');
+                        b.classList.add('bg-white', 'bg-opacity-20');
+                    });
+
+                    // 添加当前按钮的active状态
+                    btn.classList.add('active', 'bg-primary');
+                    btn.classList.remove('bg-white', 'bg-opacity-20');
+
+                    // 筛选网站
+                    const category = btn.dataset.category;
+                    renderWebsites(category);
+                });
+            });
+
+            // 搜索引擎选择按钮点击事件
+            searchEngineBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除所有按钮的active状态
+                    searchEngineBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary');
+                        b.classList.add('bg-white', 'bg-opacity-20');
+                    });
+
+                    // 添加当前按钮的active状态
+                    btn.classList.add('active', 'bg-primary');
+                    btn.classList.remove('bg-white', 'bg-opacity-20');
+
+                    // 更新当前选择的搜索引擎
+                    currentSearchEngine = btn.dataset.engine;
+                });
+            });
+
+
+
+            // 自定义背景按钮点击事件
+            customBgBtn.addEventListener('click', () => {
+                customBgModal.classList.remove('hidden');
+            });
+
+            // 取消自定义背景按钮点击事件
+            cancelBgBtn.addEventListener('click', () => {
+                customBgModal.classList.add('hidden');
+                document.getElementById('bg-url').value = '';
+            });
+
+            // 应用自定义背景按钮点击事件
+            applyBgBtn.addEventListener('click', () => {
+                const bgUrl = document.getElementById('bg-url').value;
+
+                if (bgUrl) {
+                    // 将自定义背景添加到背景列表中
+                    if (!backgrounds.includes(bgUrl)) {
+                        backgrounds.push(bgUrl);
+                    }
+
+                    // 设置当前背景为新添加的自定义背景
+                    currentBgIndex = backgrounds.indexOf(bgUrl);
+                    backgroundElement.style.backgroundImage = `url('${bgUrl}')`;
+
+                    // 保存自定义背景列表和当前索引
+                    localStorage.setItem('customBackgrounds', JSON.stringify(backgrounds));
+                    saveData();
+
+                    customBgModal.classList.add('hidden');
+                    document.getElementById('bg-url').value = '';
+                }
+            });
+
+            // 上一张背景按钮点击事件
+            bgPrevBtn.addEventListener('click', () => {
+                currentBgIndex = (currentBgIndex - 1 + backgrounds.length) % backgrounds.length;
+                backgroundElement.style.backgroundImage = `url('${backgrounds[currentBgIndex]}')`;
+                saveData();
+            });
+
+            // 下一张背景按钮点击事件
+            bgNextBtn.addEventListener('click', () => {
+                currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
+                backgroundElement.style.backgroundImage = `url('${backgrounds[currentBgIndex]}')`;
+                saveData();
+            });
+
+            // 搜索框回车事件
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            // 搜索按钮点击事件
+            searchBtn.addEventListener('click', performSearch);
+
+            // 点击模态框外部关闭模态框
+            window.addEventListener('click', (e) => {
+                if (e.target === customBgModal) {
+                    customBgModal.classList.add('hidden');
+                    document.getElementById('bg-url').value = '';
+                }
+            });
+        }
+
+        // 执行搜索
+        function performSearch() {
+            const query = searchInput.value.trim();
+
+            if (!query) return;
+
+            // 检查是否是URL
+            if (query.startsWith('http://') || query.startsWith('https://')) {
+                window.open(query, '_blank');
+            } else if (query.includes('.')) {
+                window.open('https://' + query, '_blank');
+            } else {
+                // 根据选择的搜索引擎进行搜索
+                let searchUrl = '';
+                const encodedQuery = encodeURIComponent(query);
+
+                switch (currentSearchEngine) {
+                    case 'baidu':
+                        searchUrl = 'https://www.baidu.com/s?wd=' + encodedQuery;
+                        break;
+                    case 'bing':
+                        searchUrl = 'https://www.bing.com/search?q=' + encodedQuery;
+                        break;
+                    case 'google':
+                        searchUrl = 'https://www.google.com/search?q=' + encodedQuery;
+                        break;
+                    default:
+                        searchUrl = 'https://www.baidu.com/s?wd=' + encodedQuery;
+                }
+
+                window.open(searchUrl, '_blank');
+            }
+
+            searchInput.value = '';
+        }
+
+
+    </script>
+
+</body>
+
+</html>

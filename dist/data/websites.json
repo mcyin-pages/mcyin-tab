@@ -1,0 +1,417 @@
+{
+  "websites": [
+    {
+      "name": "115",
+      "url": "https://115.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/115.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "4399",
+      "url": "https://www.4399.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.4399.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "Epic Game",
+      "url": "https://store.epicgames.com/zh-CN/",
+      "category": "常用",
+      "icon": "/images/icons/websites/store.epicgames.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "IT之家",
+      "url": "https://www.ithome.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.ithome.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "NGA社区",
+      "url": "https://www.nga.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.nga.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "QQ空间",
+      "url": "https://qzone.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/qzone.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://y.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/y.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "QQ邮箱",
+      "url": "https://mail.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/mail.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/store.steampowered.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "TapTap",
+      "url": "https://www.taptap.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.taptap.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "Wallpaper时光机",
+      "url": "https://wallpaper.mcyin.com/",
+      "category": "小殷",
+      "icon": "/images/icons/websites/wallpaper.mcyin.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "YY",
+      "url": "https://www.yy.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.yy.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "阿里云盘",
+      "url": "https://www.alipan.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.alipan.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "爱奇艺",
+      "url": "https://www.iqiyi.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.iqiyi.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "百度",
+      "url": "https://www.baidu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.baidu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "百度地图",
+      "url": "https://map.baidu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/map.baidu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "百度翻译",
+      "url": "https://fanyi.baidu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/fanyi.baidu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "百度贴吧",
+      "url": "https://tieba.baidu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/tieba.baidu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "百度网盘",
+      "url": "https://pan.baidu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/pan.baidu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "哔哩哔哩",
+      "url": "https://www.bilibili.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.bilibili.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "抖音",
+      "url": "https://www.douyin.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.douyin.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "斗鱼",
+      "url": "https://www.douyu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.douyu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "豆瓣",
+      "url": "https://www.douban.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.douban.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "番茄小说",
+      "url": "https://www.fanqienovel.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/fanqienovel.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "好游快爆",
+      "url": "https://www.3839.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.3839.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "红果短剧",
+      "url": "https://www.novelquickapp.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.novelquickapp.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "虎牙",
+      "url": "https://www.huya.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.huya.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "今日头条",
+      "url": "https://www.toutiao.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.toutiao.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "金山文档",
+      "url": "https://www.kdocs.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.kdocs.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "京东",
+      "url": "https://www.jd.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.jd.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "快手",
+      "url": "https://www.kuaishou.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.kuaishou.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "芒果TV",
+      "url": "https://www.mgtv.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.mgtv.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "美团",
+      "url": "https://www.meituan.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.meituan.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "咪咕视频",
+      "url": "https://www.miguvideo.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.miguvideo.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "咪咕音乐",
+      "url": "https://music.migu.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/music.migu.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "米游社",
+      "url": "https://www.miyoushe.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.miyoushe.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "拼多多",
+      "url": "https://www.pinduoduo.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.pinduoduo.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "起点中文网",
+      "url": "https://www.qidian.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.qidian.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "搜狐",
+      "url": "https://www.sohu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.sohu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "搜狐视频",
+      "url": "https://tv.sohu.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/tv.sohu.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "淘宝",
+      "url": "https://www.taobao.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.taobao.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "腾讯",
+      "url": "https://www.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "腾讯视频",
+      "url": "https://v.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/v.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "腾讯文档",
+      "url": "https://docs.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/docs.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "腾讯先锋",
+      "url": "https://gamer.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/gamer.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "天猫",
+      "url": "https://www.tmall.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.tmall.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "网易",
+      "url": "https://www.163.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.163.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "网易云音乐",
+      "url": "https://music.163.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/music.163.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "网易云游戏",
+      "url": "https://cg.163.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/cg.163.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "微博",
+      "url": "https://weibo.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/weibo.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "微信",
+      "url": "https://wx.qq.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/wx.qq.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "西瓜视频",
+      "url": "https://www.ixigua.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.ixigua.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "小黑盒",
+      "url": "https://www.xiaoheihe.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.xiaoheihe.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "新浪",
+      "url": "https://www.sina.com.cn/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.sina.com.cn.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "迅雷云盘",
+      "url": "https://pan.xunlei.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/pan.xunlei.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "央视网",
+      "url": "https://www.cctv.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.cctv.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "优酷",
+      "url": "https://www.youku.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.youku.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "游民星空",
+      "url": "https://www.gamersky.com/",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.gamersky.com.webp",
+      "color": "bg-blue-500"
+    },
+    {
+      "name": "知乎",
+      "url": "https://www.zhihu.com/explore",
+      "category": "常用",
+      "icon": "/images/icons/websites/www.zhihu.com.webp",
+      "color": "bg-blue-500"
+    }
+  ]
+}
